@@ -1,22 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Anirudh Narkedamilly — Developer Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anirudh Narkedamilly — Portfolio</title>
+  <meta name="description" content="Portfolio of Anirudh Narkedamilly — Software Developer focusing on systems, cloud, and AI." />
+  <style>
+    :root{
+      --bg:#0f1220; --card:#151a2f; --text:#e8ecff; --muted:#9fb0ff;
+      --accent:#6ea8fe; --accent2:#8be9fd; --max:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,'Helvetica Neue',Arial;
+      background:linear-gradient(180deg,#0b0e1b, #0f1220 25%, #0f1220);
+      color:var(--text);
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{opacity:0.9}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px}
+    header{
+      display:flex; align-items:center; justify-content:space-between; gap:16px;
+      padding:14px 0; position:sticky; top:0; backdrop-filter:saturate(140%) blur(6px);
+    }
+    .brand{font-weight:700; letter-spacing:.3px}
+    nav a{margin-left:16px}
+    .hero{
+      padding:72px 0 40px;
+      display:grid; grid-template-columns:1fr; gap:18px; text-align:left;
+    }
+    .title{font-size:36px; line-height:1.15; margin:0}
+    .subtitle{color:var(--muted); margin:10px 0 0}
+    .cta{display:flex; gap:12px; margin-top:18px; flex-wrap:wrap}
+    .btn{
+      display:inline-block; padding:10px 14px; border-radius:12px; background:var(--accent);
+      color:#0c1022; font-weight:600;
+    }
+    .btn.secondary{background:transparent; border:1px solid #334; color:var(--text)}
+    section{padding:34px 0}
+    .card{
+      background:linear-gradient(180deg,#12162a,#141936); border:1px solid #202544;
+      border-radius:16px; padding:18px;
+    }
+    .grid{display:grid; gap:16px}
+    @media (min-width:780px){
+      .hero{grid-template-columns:1.25fr .75fr}
+      .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+      .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    }
+    h2{margin:0 0 14px}
+    ul.inline{list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:12px}
+    footer{padding:36px 0; color:#b5c1ff80; font-size:14px; border-top:1px solid #1b2242}
+    .badge{font-size:12px; padding:6px 8px; border:1px solid #283055; border-radius:10px; color:#b8c6ff}
+    .muted{color:#b8c6ffcc}
+    .right{justify-self:end}
+    .avatar{
+      width:140px; height:140px; border-radius:18px; background:#222a55; border:1px solid #2a3364;
+      display:flex; align-items:center; justify-content:center; font-weight:800; color:#90a2ff;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello, I'm Anirudh 👋</h1>
-  <p>Software Developer • Systems & Cloud • AI Enthusiast</p>
+  <div class="wrap">
+    <header>
+      <div class="brand">Anirudh Narkedamilly</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#links">Links</a>
+      </nav>
+    </header>
 
-  <h2>Projects</h2>
-  <ul>
-    <li><a href="https://db.anirudhdev.com" target="_blank">ElVoidDB — Collaborative Database Engine</a></li>
-  </ul>
+    <section class="hero">
+      <div>
+        <h1 class="title">Building systems, cloud backends, and AI tools.</h1>
+        <p class="subtitle">Graduate engineer focused on C++/Python, databases, Kubernetes & AWS. Currently collaborating on a from-scratch database engine.</p>
+        <div class="cta">
+          <a class="btn" href="https://db.anirudhdev.com" target="_blank">ElVoidDB (Collab)</a>
+          <a class="btn secondary" href="#projects">See all projects</a>
+        </div>
+        <div style="margin-top:12px;">
+          <span class="badge">C++17</span>
+          <span class="badge">Python</span>
+          <span class="badge">Kubernetes</span>
+          <span class="badge">AWS</span>
+        </div>
+      </div>
+      <div class="right">
+        <!-- Replace this with your headshot later -->
+        <div class="avatar">AN</div>
+      </div>
+    </section>
 
-  <h2>Links</h2>
-  <ul>
-    <li><a href="https://github.com/Anicherry780" target="_blank">GitHub</a></li>
-  </ul>
+    <section id="about">
+      <div class="card">
+        <h2>About</h2>
+        <p class="muted">
+          I’m Anirudh, a developer who enjoys low-level systems and practical AI. I like building from scratch:
+          storage engines, event-driven services, and small tools that make dev life easier.
+        </p>
+      </div>
+    </section>
 
-  <p>More coming soon 🚀</p>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>ElVoidDB</h3>
+          <p class="muted">Collaborative C++17 database engine: slotted pages, buffer pool (LRU), minimal SQL.</p>
+          <p><a href="https://db.anirudhdev.com" target="_blank">Project site →</a></p>
+        </div>
+        <div class="card">
+          <h3>GPUShare</h3>
+          <p class="muted">Distributed GPU sharing & monitoring (Python/Flask + Workers). (Coming soon)</p>
+        </div>
+        <div class="card">
+          <h3>MiniMall</h3>
+          <p class="muted">Event-driven microservices (Spring/React, Kong, Redis, MariaDB). (Coming soon)</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="links">
+      <h2>Links</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <ul class="inline">
+            <li><a href="https://github.com/Anicherry780" target="_blank">GitHub</a></li>
+            <li><a href="mailto:srimanya@buffalo.edu">Email</a></li>
+            <!-- Add LinkedIn when ready -->
+          </ul>
+        </div>
+        <div class="card">
+          <p class="muted">Resume link can go here later (PDF).</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="y"></span> Anirudh Narkedamilly • Built with GitHub Pages • Collab credit: <a href="https://github.com/Srimany123/ElVoidDB" target="_blank">@Srimany123</a></div>
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
