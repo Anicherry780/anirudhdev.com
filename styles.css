@@ -1,0 +1,146 @@
+:root {
+  --bg: #ffffff;
+  --text: #0b0f19;
+  --muted: #5b6474;
+  --card: #f5f6f8;
+  --border: #e2e4ea;
+  --link: #0b62ff;
+}
+
+html[data-theme="dark"] {
+  --bg: #0b0f19;
+  --text: #eef2ff;
+  --muted: #aab3c3;
+  --card: #141a2a;
+  --border: #232b3d;
+  --link: #7aa7ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+}
+
+.nav {
+  max-width: 960px;
+  margin: auto;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-weight: 800;
+}
+
+nav a {
+  margin-right: 14px;
+  font-size: 14px;
+}
+
+nav button {
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  cursor: pointer;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 28px 20px;
+}
+
+.hero h1 {
+  font-size: 34px;
+  margin: 0;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 60ch;
+}
+
+.links {
+  margin-top: 14px;
+}
+.links a {
+  margin-right: 14px;
+  font-weight: 600;
+}
+
+h2 {
+  margin-top: 36px;
+  font-size: 18px;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+}
+@media (min-width: 820px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.tags {
+  margin-top: 10px;
+}
+.tags span {
+  display: inline-block;
+  padding: 6px 10px;
+  margin: 4px 6px 0 0;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.project-links a {
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 20px;
+  color: var(--muted);
+  font-size: 13px;
+}
