@@ -8,13 +8,13 @@
 }
 
 html[data-theme="dark"] {
-  --bg: #0a0a0f;
-  --text: #e8eaf0;
-  --muted: #8b93a6;
-  --card: #12131a;
-  --border: #1e2030;
-  --link: #60a5fa;
-  --accent-glow: rgba(96, 165, 250, 0.08);
+  --bg: #050507;
+  --text: #e8f4f8;
+  --muted: #6b8f9e;
+  --card: #0a0c12;
+  --border: #0e2a35;
+  --link: #00f0ff;
+  --accent-glow: rgba(0, 240, 255, 0.12);
 }
 
 * {
@@ -47,7 +47,7 @@ header {
 }
 
 html[data-theme="dark"] header {
-  background: rgba(10, 10, 15, 0.85);
+  background: rgba(5, 5, 7, 0.85);
 }
 
 .nav {
@@ -152,7 +152,16 @@ html[data-theme="dark"] .card:hover {
   transition: border-color 0.2s, color 0.2s;
 }
 html[data-theme="dark"] .tags span {
-  background: rgba(96, 165, 250, 0.05);
+  background: rgba(0, 240, 255, 0.05);
+}
+
+html[data-theme="dark"] .brand {
+  color: #00f0ff;
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+}
+
+html[data-theme="dark"] .hero h1 {
+  text-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
 }
 
 .project-links a {
