@@ -164,6 +164,12 @@ a {
   background-color: #131315;
   border-radius: 20px;
   flex: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(255, 101, 34, 0.08);
 }
 
 .skill-header {
@@ -230,10 +236,25 @@ a {
   gap: 10px;
 }
 
+/* 3D tilt container */
+.tilt {
+  perspective: 800px;
+}
+
+.tilt-inner {
+  transition: transform 0.15s ease;
+  transform-style: preserve-3d;
+}
+
 .project {
   background-color: #131315;
   border-radius: 20px;
   padding: 36px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  box-shadow: 0 12px 40px rgba(255, 101, 34, 0.1);
 }
 
 .project-header {
@@ -321,6 +342,12 @@ a {
   background-color: #131315;
   border-radius: 20px;
   padding: 32px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-small:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(255, 101, 34, 0.08);
 }
 
 .project-name-sm {
