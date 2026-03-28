@@ -13,10 +13,16 @@
 </head>
 
 <body>
+  <!-- Floating particles canvas -->
+  <canvas id="particles"></canvas>
+
+  <!-- Animated gradient mesh background -->
+  <div class="gradient-mesh"></div>
+
   <div class="container">
 
     <!-- Navbar -->
-    <div class="navbar">
+    <div class="navbar glass">
       <div class="brand">anirudh.</div>
       <div class="nav-links">
         <a href="#projects">projects</a>
@@ -25,34 +31,33 @@
       </div>
     </div>
 
-    <!-- About -->
-    <div class="about">
-      <div class="about-left">
-        <div class="field-section">
-          <div class="name">Anirudh Narkedamilly</div>
+    <!-- Hero — single wide card -->
+    <div class="hero glass neon-border" id="hero">
+      <div class="hero-content">
+        <div class="hero-left">
+          <div class="name">Anirudh<br>Narkedamilly</div>
           <div class="role">Software Engineer</div>
         </div>
+        <div class="hero-right">
+          <p>
+            Backend engineer with <span class="highlight">4+ years</span> of experience building
+            <span class="highlight">distributed systems</span> and
+            <span class="highlight">cloud-native platforms.</span>
+            Focused on reliability, performance, and maintainable system design.
+          </p>
+        </div>
       </div>
-      <div class="about-right">
-        <div class="section-label">ABOUT</div>
-        <span class="highlight">Backend engineer with 4+ years</span> of experience building
-        <span class="highlight">distributed systems</span> and
-        <span class="highlight">cloud-native platforms.</span>
-        Focused on reliability, performance, and maintainable system design.
+      <div class="socials">
+        <a class="social-link email-link" href="mailto:anirudhnarkedamilly@gmail.com">email.</a>
+        <a class="social-link" href="https://github.com/Anicherry780" target="_blank">github.</a>
+        <a class="social-link" href="https://www.linkedin.com/in/anirudh-narkedamilly-223070224/" target="_blank">linkedin.</a>
+        <a class="social-link" href="https://zk.anirudhdev.com/" target="_blank">research.</a>
       </div>
-    </div>
-
-    <!-- Socials -->
-    <div class="socials">
-      <a class="social-link email-link" href="mailto:anirudhnarkedamilly@gmail.com">email.</a>
-      <a class="social-link" href="https://github.com/Anicherry780" target="_blank">github.</a>
-      <a class="social-link" href="https://www.linkedin.com/in/anirudh-narkedamilly-223070224/" target="_blank">linkedin.</a>
-      <a class="social-link" href="https://zk.anirudhdev.com/" target="_blank">research.</a>
     </div>
 
     <!-- Skills -->
     <div class="skills" id="skills">
-      <div class="skill-card" id="skill-1">
+      <div class="skill-card glass neon-border" id="skill-1">
         <div class="skill-header">Backend.</div>
         <div class="skill-items">
           <div class="skill-name">Java</div>
@@ -61,7 +66,7 @@
           <div class="skill-name">SQL</div>
         </div>
       </div>
-      <div class="skill-card" id="skill-2">
+      <div class="skill-card glass neon-border" id="skill-2">
         <div class="skill-header">Cloud & Infra.</div>
         <div class="skill-items">
           <div class="skill-name">AWS</div>
@@ -69,7 +74,7 @@
           <div class="skill-name">Kubernetes</div>
         </div>
       </div>
-      <div class="skill-card" id="skill-3">
+      <div class="skill-card glass neon-border" id="skill-3">
         <div class="skill-header">Frontend.</div>
         <div class="skill-items">
           <div class="skill-name">React</div>
@@ -81,12 +86,12 @@
 
     <!-- Education & Certs -->
     <div class="info-row">
-      <div class="info-card">
+      <div class="info-card glass neon-border">
         <div class="section-label">EDUCATION</div>
         <div class="info-title">M.S. Computer Science</div>
         <div class="info-subtitle">University at Buffalo, SUNY</div>
       </div>
-      <div class="info-card">
+      <div class="info-card glass neon-border">
         <div class="section-label">CERTIFICATIONS</div>
         <div class="cert-tags">
           <span class="cert-tag">AWS Certified Developer</span>
@@ -97,7 +102,7 @@
 
     <!-- Projects -->
     <div class="project-section" id="projects">
-      <div class="project" id="project-1">
+      <div class="project glass neon-border" id="project-1">
         <div class="project-header">
           <div>
             <div class="section-label">PROJECTS</div>
@@ -124,13 +129,13 @@
         </div>
       </div>
 
-      <div class="project" id="project-2">
+      <div class="project glass neon-border" id="project-2">
         <div class="project-header">
           <div>
             <div class="project-name">ZK Research.</div>
             <div class="project-desc">
               Mutation-guided parameterization for zero-knowledge proofs. Research exploring
-              leakage–cost tradeoffs with visualizations and published artifacts.
+              leakage-cost tradeoffs with visualizations and published artifacts.
             </div>
           </div>
           <a href="https://zk.anirudhdev.com/" target="_blank">
@@ -149,7 +154,7 @@
         </div>
       </div>
 
-      <div class="project" id="project-3">
+      <div class="project glass neon-border" id="project-3">
         <div class="project-header">
           <div>
             <div class="project-name">DataForge.</div>
@@ -174,7 +179,7 @@
       </div>
 
       <div class="project-grid">
-        <div class="project-small" id="project-4">
+        <div class="project-small glass neon-border" id="project-4">
           <div class="project-name-sm">Retail Dashboard.</div>
           <div class="project-desc-sm">Interactive inventory insights, forecasting, and SQL optimization.</div>
           <div class="project-tags-sm">
@@ -183,7 +188,7 @@
             <span>Streamlit</span>
           </div>
         </div>
-        <div class="project-small" id="project-5">
+        <div class="project-small glass neon-border" id="project-5">
           <div class="project-name-sm">Packet Lab.</div>
           <div class="project-desc-sm">Docker-based network simulation with packet capture and anomaly detection.</div>
           <div class="project-tags-sm">
@@ -196,7 +201,7 @@
     </div>
 
     <!-- Contact -->
-    <div class="contact" id="contact">
+    <div class="contact glass neon-border" id="contact">
       <div class="contact-heading">Let's connect.</div>
       <a class="contact-btn" href="mailto:anirudhnarkedamilly@gmail.com">
         <button>anirudhnarkedamilly@gmail.com</button>
@@ -205,7 +210,7 @@
     </div>
 
     <!-- Footer -->
-    <div class="footer">
+    <div class="footer glass">
       <div class="brand">anirudh.</div>
       <div class="footer-right">&copy; <span id="year"></span> all rights reserved</div>
     </div>
