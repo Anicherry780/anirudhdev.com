@@ -306,6 +306,95 @@ a {
   font-weight: 600;
 }
 
+/* ── Experience ── */
+.experience-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.experience-card {
+  border-radius: 20px;
+  padding: 36px;
+}
+
+.exp-item {
+  padding: 8px 0;
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.exp-company {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.exp-role {
+  color: #ff6522;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 4px;
+  text-shadow: 0 0 10px rgba(255, 101, 34, 0.3);
+}
+
+.exp-date {
+  color: #a1a1aa;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.exp-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.exp-point {
+  color: #a1a1aa;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  padding-left: 16px;
+  position: relative;
+}
+
+.exp-point::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #ff6522;
+}
+
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.exp-tags span {
+  background: rgba(255, 101, 34, 0.08);
+  border: 1px solid rgba(255, 101, 34, 0.2);
+  color: #ff8c50;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.exp-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  margin: 24px 0;
+}
+
 /* ── Projects ── */
 .project-section {
   display: flex;
@@ -611,6 +700,15 @@ a {
 
   .skill-name {
     font-size: 18px;
+  }
+
+  .exp-header {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .exp-company {
+    font-size: 22px;
   }
 
   .project-name {
