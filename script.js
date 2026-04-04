@@ -122,6 +122,25 @@ gsap.fromTo(
   }
 );
 
+// Experience
+gsap.fromTo(
+  ".experience-card",
+  { opacity: 0, y: 70, rotateX: 8 },
+  {
+    opacity: 1, y: 0, rotateX: 0,
+    ease: "power2.out", duration: 1,
+    scrollTrigger: { trigger: ".experience-section", start: "0% 85%" },
+  }
+);
+
+// Skills - 4th card
+tlSkills.fromTo(
+  "#skill-4",
+  { opacity: 0, y: 60, rotateX: 15 },
+  { opacity: 1, y: 0, rotateX: 0, ease: "power2.out", duration: 0.8 },
+  "-=0.5"
+);
+
 // Projects
 ["#project-1", "#project-2", "#project-3"].forEach(function (id) {
   gsap.fromTo(
@@ -159,7 +178,7 @@ gsap.fromTo(
 
 // ── 3D Tilt Effect ──
 var tiltEls = document.querySelectorAll(
-  ".hero, .skill-card, .project, .project-small, .info-card"
+  ".hero, .skill-card, .project, .project-small, .info-card, .experience-card"
 );
 
 tiltEls.forEach(function (el) {
